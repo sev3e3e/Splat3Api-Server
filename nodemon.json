@@ -1,0 +1,10 @@
+{
+    "restartable": "rs",
+    "env": {
+        "NODE_ENV": "dev"
+    },
+    "watch": ["src"],
+    "ext": "js, ts, json",
+    "ignore": ["tests/**/*.ts"],
+    "exec": "node --no-warnings --loader ts-node/esm --es-module-specifier-resolution=node ./src/app.ts"
+}
