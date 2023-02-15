@@ -25,10 +25,11 @@ app.use(rateLimitter);
 
 useExpressServer(app, {
     controllers: [IndexController, SchedulesController],
+    development: false,
 });
 
 await RedisClient.connect();
 
 app.listen(port, () => {
-    console.log(`⚡️ Server is running on port ${port}`);
+    console.log(`⚡️ Server is running on http://localhost:${port}`);
 });
