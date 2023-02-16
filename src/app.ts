@@ -8,6 +8,7 @@ import { SchedulesController } from './routes/schedules';
 import { RedisClient } from './redisClient';
 
 import rateLimit from 'express-rate-limit';
+import { XRankingsController } from './routes/xrankings';
 
 const port = process.env.PORT || 8000;
 
@@ -24,12 +25,12 @@ const rateLimitter = rateLimit({
 app.use(rateLimitter);
 
 useExpressServer(app, {
-    controllers: [IndexController, SchedulesController],
+    controllers: [IndexController, SchedulesController, XRankingsController],
     development: false,
 });
 
 await RedisClient.connect();
 
 app.listen(port, () => {
-    console.log(`⚡️ Server is running on http://localhost:${port}`);
+    console.log(`⚡️ Server is running on localhost:${port}`);
 });
