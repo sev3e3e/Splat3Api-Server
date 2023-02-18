@@ -18,8 +18,8 @@ export class XRankingsController {
         let from = _from;
         let to = _to;
 
-        if (to - from > 25) {
-            to = from + 25;
+        if (to - from > 24) {
+            to = from + 24;
         }
 
         const value = await XRanking.getArea(from, to);
@@ -35,8 +35,8 @@ export class XRankingsController {
         let from = _from;
         let to = _to;
 
-        if (to - from > 25) {
-            to = from + 25;
+        if (to - from > 24) {
+            to = from + 24;
         }
 
         const value = await XRanking.getTower(from, to);
@@ -52,8 +52,8 @@ export class XRankingsController {
         let from = _from;
         let to = _to;
 
-        if (to - from > 25) {
-            to = from + 25;
+        if (to - from > 24) {
+            to = from + 24;
         }
 
         const value = await XRanking.getClam(from, to);
@@ -69,8 +69,8 @@ export class XRankingsController {
         let from = _from;
         let to = _to;
 
-        if (to - from > 25) {
-            to = from + 25;
+        if (to - from > 24) {
+            to = from + 24;
         }
 
         const value = await XRanking.getRainmaker(from, to);
