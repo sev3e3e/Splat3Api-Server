@@ -14,6 +14,8 @@ const port = process.env.PORT || 8000;
 
 const app = express();
 
+app.disable('x-powered-by');
+
 // 100 requests per 10 minutes.
 const rateLimitter = rateLimit({
     windowMs: 10 * 60 * 1000,
