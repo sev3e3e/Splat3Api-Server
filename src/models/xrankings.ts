@@ -1,24 +1,19 @@
 import { RedisClient } from '../redisClient';
 
-async function get(name: string) {
-    const value = await RedisClient.get(name);
-    return value;
-}
-
 export class XRanking {
     static async getAll() {
-        return get('AllXRankings');
+        return RedisClient.get('AllXRankings');
     }
-    static async getArea() {
-        return get('AreaXRankings');
+    static async getArea(from: number, to: number) {
+        return RedisClient.zRange('AreaXRankings:data', from, to);
     }
-    static async getClam() {
-        return get('ClamXRankings');
+    static async getClam(from: number, to: number) {
+        return RedisClient.zRange('ClamXRankings:data', from, to);
     }
-    static async getRainmaker() {
-        return get('RainmakerXRankings');
+    static async getRainmaker(from: number, to: number) {
+        return RedisClient.zRange('RainmakerXRankings:data', from, to);
     }
-    static async getTower() {
-        return get('TowerXRankings');
+    static async getTower(from: number, to: number) {
+        return RedisClient.zRange('TowerXRankings:data', from, to);
     }
 }
