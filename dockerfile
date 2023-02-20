@@ -25,4 +25,4 @@ RUN yarn install --frozen-lockfile --production && yarn cache clean
 
 COPY --from=build /app/dist ./dist
 
-CMD ["node", "./dist/index.js"]
+CMD ["node", "--es-module-specifier-resolution=node", "./dist/app.js"]
