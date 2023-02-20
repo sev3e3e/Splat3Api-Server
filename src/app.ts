@@ -10,7 +10,8 @@ import { RedisClient } from './redisClient';
 import rateLimit from 'express-rate-limit';
 import { XRankingsController } from './routes/xrankings';
 
-const port = process.env.PORT || 8000;
+const host = '0.0.0.0';
+const port = 8000;
 
 const app = express();
 
@@ -33,6 +34,6 @@ useExpressServer(app, {
 
 await RedisClient.connect();
 
-app.listen(port, () => {
+app.listen(port, host, () => {
     console.log(`⚡️ Server is running on localhost:${port}`);
 });
