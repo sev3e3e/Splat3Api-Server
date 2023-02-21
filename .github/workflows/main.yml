@@ -35,4 +35,4 @@ jobs:
       run: docker push us-west1-docker.pkg.dev/nodejs-splat3-api/splat3api/express
       
     - name: Update GCE container
-      run: gcloud compute instances update-container instance-2 --container-image=us-west1-docker.pkg.dev/nodejs-splat3-api/splat3api/express
+      run: gcloud compute instances update-container instance-2 --container-image=us-west1-docker.pkg.dev/nodejs-splat3-api/splat3api/express --zone=us-west1-c
