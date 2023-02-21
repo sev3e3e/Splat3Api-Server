@@ -17,7 +17,7 @@ FROM node:lts-alpine3.17 as prod
 
 WORKDIR /app
 ENV NODE_ENV=production
-EXPOSE 8000
+EXPOSE 80
 
 # install only dependencies
 COPY package*.json yarn*.lock ./
