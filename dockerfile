@@ -17,7 +17,7 @@ FROM node:lts-alpine3.17 as prod
 
 WORKDIR /app
 ENV NODE_ENV=production
-EXPOSE 8000
+EXPOSE 80
 
 # install only dependencies
 COPY package*.json yarn*.lock ./
@@ -25,4 +25,4 @@ RUN yarn install --frozen-lockfile --production && yarn cache clean
 
 COPY --from=build /app/dist ./dist
 
-CMD ["node", "./dist/index.js"]
+CMD ["node", "--es-module-specifier-resolution=node", "./dist/app.js"]

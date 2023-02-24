@@ -1,0 +1,804 @@
+{
+  "openapi": "3.1.0",
+  "x-stoplight": {
+    "id": "j300yuy4zerk1"
+  },
+  "info": {
+    "title": "Splat3Api",
+    "version": "0.1",
+    "summary": "Splatoon3 Unofficial API",
+    "description": "This is an API that can acquire various schedules such as Regular Match, Bankara Match, etc. and X Ranking data.\n\nThis API is unofficial and may be stopped without notice. The author is not responsible for any trouble, loss, or damage caused by using this API.",
+    "contact": {
+      "name": "sev3e3e",
+      "url": "https://twitter.com/sev3e3e"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/schedules": {
+      "parameters": [],
+      "get": {
+        "summary": "Get All Schedules",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "x-examples": {
+                    "Example 1": {
+                      "bankaraChallengeSchedules": [
+                        {
+                          "startTime": "2023-02-12T14:00:00.000Z",
+                          "endTime": "2023-02-12T16:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-12T16:00:00.000Z",
+                          "endTime": "2023-02-12T18:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-12T18:00:00.000Z",
+                          "endTime": "2023-02-12T20:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-12T20:00:00.000Z",
+                          "endTime": "2023-02-12T22:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-12T22:00:00.000Z",
+                          "endTime": "2023-02-13T00:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-13T00:00:00.000Z",
+                          "endTime": "2023-02-13T02:00:00.000Z",
+                          "rule": "ガチホコバトル",
+                          "stages": [
+                            {
+                              "id": 3,
+                              "name": "ヤガラ市場"
+                            },
+                            {
+                              "id": 9,
+                              "name": "ヒラメが丘団地"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T02:00:00.000Z",
+                          "endTime": "2023-02-13T04:00:00.000Z",
+                          "rule": "ガチエリア",
+                          "stages": [
+                            {
+                              "id": 1,
+                              "name": "ユノハナ大渓谷"
+                            },
+                            {
+                              "id": 16,
+                              "name": "スメーシーワールド"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T04:00:00.000Z",
+                          "endTime": "2023-02-13T06:00:00.000Z",
+                          "rule": "ガチヤグラ",
+                          "stages": [
+                            {
+                              "id": 7,
+                              "name": "クサヤ温泉"
+                            },
+                            {
+                              "id": 10,
+                              "name": "マサバ海峡大橋"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T06:00:00.000Z",
+                          "endTime": "2023-02-13T08:00:00.000Z",
+                          "rule": "ガチアサリ",
+                          "stages": [
+                            {
+                              "id": 12,
+                              "name": "マヒマヒリゾート＆スパ"
+                            },
+                            {
+                              "id": 13,
+                              "name": "海女美術大学"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T08:00:00.000Z",
+                          "endTime": "2023-02-13T10:00:00.000Z",
+                          "rule": "ガチホコバトル",
+                          "stages": [
+                            {
+                              "id": 4,
+                              "name": "マテガイ放水路"
+                            },
+                            {
+                              "id": 14,
+                              "name": "チョウザメ造船"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T10:00:00.000Z",
+                          "endTime": "2023-02-13T12:00:00.000Z",
+                          "rule": "ガチエリア",
+                          "stages": [
+                            {
+                              "id": 6,
+                              "name": "ナメロウ金属"
+                            },
+                            {
+                              "id": 13,
+                              "name": "海女美術大学"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T12:00:00.000Z",
+                          "endTime": "2023-02-13T14:00:00.000Z",
+                          "rule": "ガチヤグラ",
+                          "stages": [
+                            {
+                              "id": 3,
+                              "name": "ヤガラ市場"
+                            },
+                            {
+                              "id": 15,
+                              "name": "ザトウマーケット"
+                            }
+                          ]
+                        }
+                      ],
+                      "bankaraOpenSchedules": [
+                        {
+                          "startTime": "2023-02-12T14:00:00.000Z",
+                          "endTime": "2023-02-12T16:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-12T16:00:00.000Z",
+                          "endTime": "2023-02-12T18:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-12T18:00:00.000Z",
+                          "endTime": "2023-02-12T20:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-12T20:00:00.000Z",
+                          "endTime": "2023-02-12T22:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-12T22:00:00.000Z",
+                          "endTime": "2023-02-13T00:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-13T00:00:00.000Z",
+                          "endTime": "2023-02-13T02:00:00.000Z",
+                          "rule": "ガチヤグラ",
+                          "stages": [
+                            {
+                              "id": 7,
+                              "name": "クサヤ温泉"
+                            },
+                            {
+                              "id": 11,
+                              "name": "キンメダイ美術館"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T02:00:00.000Z",
+                          "endTime": "2023-02-13T04:00:00.000Z",
+                          "rule": "ガチアサリ",
+                          "stages": [
+                            {
+                              "id": 10,
+                              "name": "マサバ海峡大橋"
+                            },
+                            {
+                              "id": 14,
+                              "name": "チョウザメ造船"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T04:00:00.000Z",
+                          "endTime": "2023-02-13T06:00:00.000Z",
+                          "rule": "ガチホコバトル",
+                          "stages": [
+                            {
+                              "id": 2,
+                              "name": "ゴンズイ地区"
+                            },
+                            {
+                              "id": 12,
+                              "name": "マヒマヒリゾート＆スパ"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T06:00:00.000Z",
+                          "endTime": "2023-02-13T08:00:00.000Z",
+                          "rule": "ガチエリア",
+                          "stages": [
+                            {
+                              "id": 1,
+                              "name": "ユノハナ大渓谷"
+                            },
+                            {
+                              "id": 4,
+                              "name": "マテガイ放水路"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T08:00:00.000Z",
+                          "endTime": "2023-02-13T10:00:00.000Z",
+                          "rule": "ガチヤグラ",
+                          "stages": [
+                            {
+                              "id": 7,
+                              "name": "クサヤ温泉"
+                            },
+                            {
+                              "id": 13,
+                              "name": "海女美術大学"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T10:00:00.000Z",
+                          "endTime": "2023-02-13T12:00:00.000Z",
+                          "rule": "ガチアサリ",
+                          "stages": [
+                            {
+                              "id": 3,
+                              "name": "ヤガラ市場"
+                            },
+                            {
+                              "id": 11,
+                              "name": "キンメダイ美術館"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T12:00:00.000Z",
+                          "endTime": "2023-02-13T14:00:00.000Z",
+                          "rule": "ガチホコバトル",
+                          "stages": [
+                            {
+                              "id": 4,
+                              "name": "マテガイ放水路"
+                            },
+                            {
+                              "id": 6,
+                              "name": "ナメロウ金属"
+                            }
+                          ]
+                        }
+                      ],
+                      "regularSchedules": [
+                        {
+                          "startTime": "2023-02-12T14:00:00.000Z",
+                          "endTime": "2023-02-12T16:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-12T16:00:00.000Z",
+                          "endTime": "2023-02-12T18:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-12T18:00:00.000Z",
+                          "endTime": "2023-02-12T20:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-12T20:00:00.000Z",
+                          "endTime": "2023-02-12T22:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-12T22:00:00.000Z",
+                          "endTime": "2023-02-13T00:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-13T00:00:00.000Z",
+                          "endTime": "2023-02-13T02:00:00.000Z",
+                          "rule": "ナワバリバトル",
+                          "stages": [
+                            {
+                              "id": 15,
+                              "name": "ザトウマーケット"
+                            },
+                            {
+                              "id": 16,
+                              "name": "スメーシーワールド"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T02:00:00.000Z",
+                          "endTime": "2023-02-13T04:00:00.000Z",
+                          "rule": "ナワバリバトル",
+                          "stages": [
+                            {
+                              "id": 12,
+                              "name": "マヒマヒリゾート＆スパ"
+                            },
+                            {
+                              "id": 13,
+                              "name": "海女美術大学"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T04:00:00.000Z",
+                          "endTime": "2023-02-13T06:00:00.000Z",
+                          "rule": "ナワバリバトル",
+                          "stages": [
+                            {
+                              "id": 6,
+                              "name": "ナメロウ金属"
+                            },
+                            {
+                              "id": 11,
+                              "name": "キンメダイ美術館"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T06:00:00.000Z",
+                          "endTime": "2023-02-13T08:00:00.000Z",
+                          "rule": "ナワバリバトル",
+                          "stages": [
+                            {
+                              "id": 7,
+                              "name": "クサヤ温泉"
+                            },
+                            {
+                              "id": 10,
+                              "name": "マサバ海峡大橋"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T08:00:00.000Z",
+                          "endTime": "2023-02-13T10:00:00.000Z",
+                          "rule": "ナワバリバトル",
+                          "stages": [
+                            {
+                              "id": 2,
+                              "name": "ゴンズイ地区"
+                            },
+                            {
+                              "id": 3,
+                              "name": "ヤガラ市場"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T10:00:00.000Z",
+                          "endTime": "2023-02-13T12:00:00.000Z",
+                          "rule": "ナワバリバトル",
+                          "stages": [
+                            {
+                              "id": 4,
+                              "name": "マテガイ放水路"
+                            },
+                            {
+                              "id": 7,
+                              "name": "クサヤ温泉"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T12:00:00.000Z",
+                          "endTime": "2023-02-13T14:00:00.000Z",
+                          "rule": "ナワバリバトル",
+                          "stages": [
+                            {
+                              "id": 1,
+                              "name": "ユノハナ大渓谷"
+                            },
+                            {
+                              "id": 13,
+                              "name": "海女美術大学"
+                            }
+                          ]
+                        }
+                      ],
+                      "salmonRunSchedules": [
+                        {
+                          "startTime": "2023-02-11T16:00:00.000Z",
+                          "endTime": "2023-02-13T08:00:00.000Z",
+                          "stage": "ムニ・エール海洋発電所",
+                          "weapons": [
+                            "LACT-450",
+                            "プロモデラーMG",
+                            "ヴァリアブルローラー",
+                            "バレルスピナー"
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T08:00:00.000Z",
+                          "endTime": "2023-02-15T00:00:00.000Z",
+                          "stage": "難破船ドン・ブラコ",
+                          "weapons": [
+                            "クラッシュブラスター",
+                            "デュアルスイーパー",
+                            "クーゲルシュライバー",
+                            "スクイックリンα"
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-15T00:00:00.000Z",
+                          "endTime": "2023-02-16T16:00:00.000Z",
+                          "stage": "シェケナダム",
+                          "weapons": [
+                            "わかばシューター",
+                            "スプラスピナー",
+                            "ホクサイ",
+                            "Rブラスターエリート"
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-16T16:00:00.000Z",
+                          "endTime": "2023-02-18T08:00:00.000Z",
+                          "stage": "アラマキ砦",
+                          "weapons": [
+                            "ボールドマーカー",
+                            "パブロ",
+                            "スクリュースロッシャー",
+                            "リッター4K"
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-18T08:00:00.000Z",
+                          "endTime": "2023-02-20T00:00:00.000Z",
+                          "stage": "難破船ドン・ブラコ",
+                          "weapons": [
+                            "ランダム",
+                            "ランダム",
+                            "ランダム",
+                            "ランダム"
+                          ]
+                        }
+                      ],
+                      "xSchedules": [
+                        {
+                          "startTime": "2023-02-12T14:00:00.000Z",
+                          "endTime": "2023-02-12T16:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-12T16:00:00.000Z",
+                          "endTime": "2023-02-12T18:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-12T18:00:00.000Z",
+                          "endTime": "2023-02-12T20:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-12T20:00:00.000Z",
+                          "endTime": "2023-02-12T22:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-12T22:00:00.000Z",
+                          "endTime": "2023-02-13T00:00:00.000Z",
+                          "rule": null,
+                          "stages": null
+                        },
+                        {
+                          "startTime": "2023-02-13T00:00:00.000Z",
+                          "endTime": "2023-02-13T02:00:00.000Z",
+                          "rule": "ガチエリア",
+                          "stages": [
+                            {
+                              "id": 12,
+                              "name": "マヒマヒリゾート＆スパ"
+                            },
+                            {
+                              "id": 13,
+                              "name": "海女美術大学"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T02:00:00.000Z",
+                          "endTime": "2023-02-13T04:00:00.000Z",
+                          "rule": "ガチホコバトル",
+                          "stages": [
+                            {
+                              "id": 7,
+                              "name": "クサヤ温泉"
+                            },
+                            {
+                              "id": 9,
+                              "name": "ヒラメが丘団地"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T04:00:00.000Z",
+                          "endTime": "2023-02-13T06:00:00.000Z",
+                          "rule": "ガチアサリ",
+                          "stages": [
+                            {
+                              "id": 1,
+                              "name": "ユノハナ大渓谷"
+                            },
+                            {
+                              "id": 4,
+                              "name": "マテガイ放水路"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T06:00:00.000Z",
+                          "endTime": "2023-02-13T08:00:00.000Z",
+                          "rule": "ガチヤグラ",
+                          "stages": [
+                            {
+                              "id": 3,
+                              "name": "ヤガラ市場"
+                            },
+                            {
+                              "id": 11,
+                              "name": "キンメダイ美術館"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T08:00:00.000Z",
+                          "endTime": "2023-02-13T10:00:00.000Z",
+                          "rule": "ガチエリア",
+                          "stages": [
+                            {
+                              "id": 1,
+                              "name": "ユノハナ大渓谷"
+                            },
+                            {
+                              "id": 6,
+                              "name": "ナメロウ金属"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T10:00:00.000Z",
+                          "endTime": "2023-02-13T12:00:00.000Z",
+                          "rule": "ガチホコバトル",
+                          "stages": [
+                            {
+                              "id": 14,
+                              "name": "チョウザメ造船"
+                            },
+                            {
+                              "id": 15,
+                              "name": "ザトウマーケット"
+                            }
+                          ]
+                        },
+                        {
+                          "startTime": "2023-02-13T12:00:00.000Z",
+                          "endTime": "2023-02-13T14:00:00.000Z",
+                          "rule": "ガチアサリ",
+                          "stages": [
+                            {
+                              "id": 2,
+                              "name": "ゴンズイ地区"
+                            },
+                            {
+                              "id": 9,
+                              "name": "ヒラメが丘団地"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "properties": {
+                    "bankaraChallengeSchedules": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Schedule"
+                      }
+                    },
+                    "bankaraOpenSchedules": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Schedule"
+                      }
+                    },
+                    "regularSchedules": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Schedule"
+                      }
+                    },
+                    "salmonRunSchedules": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/SalmonRunSchedule"
+                      }
+                    },
+                    "xSchedules": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Schedule"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Get User Alice Smith": {
+                    "value": {
+                      "id": 142,
+                      "firstName": "Alice",
+                      "lastName": "Smith",
+                      "email": "alice.smith@gmail.com",
+                      "dateOfBirth": "1997-10-31",
+                      "emailVerified": true,
+                      "signUpDate": "2019-08-24"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-schedules",
+        "description": "`regular match` `bankaraMatch Open` `bankaraMatch Challenge` `Salmon Run` `X Battle`のスケジュールを返します。"
+      }
+    },
+    "/schedules/bankara": {
+      "get": {
+        "summary": "Get Bankara Open/Challenge Schedules",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-schedules-bankara",
+        "description": "バンカラマッチのScheduleを取得します。"
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Schedule": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "startTime": "2023-02-13T10:00:00.000Z",
+            "endTime": "2023-02-13T12:00:00.000Z",
+            "rule": "ガチアサリ",
+            "stages": [
+              {
+                "id": 3,
+                "name": "ヤガラ市場"
+              },
+              {
+                "id": 11,
+                "name": "キンメダイ美術館"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "startTime": {
+            "type": "string"
+          },
+          "endTime": {
+            "type": "string"
+          },
+          "rule": {
+            "type": "string"
+          },
+          "stages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "description": ""
+      },
+      "SalmonRunSchedule": {
+        "type": "object",
+        "properties": {
+          "startTime": {
+            "type": "string"
+          },
+          "endTime": {
+            "type": "string"
+          },
+          "stage": {
+            "type": "string"
+          },
+          "weapons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "startTime": "2023-02-11T16:00:00.000Z",
+            "endTime": "2023-02-13T08:00:00.000Z",
+            "stage": "ムニ・エール海洋発電所",
+            "weapons": [
+              "LACT-450",
+              "プロモデラーMG",
+              "ヴァリアブルローラー",
+              "バレルスピナー"
+            ]
+          }
+        }
+      }
+    },
+    "responses": {},
+    "securitySchemes": {}
+  }
+}
