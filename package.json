@@ -9,7 +9,10 @@
         "watch": "nodemon",
         "build": "tsc",
         "ci": "yarn --frozen-lockfile",
-        "gen-types": "npx openapi-typescript ./src/types/schema.json --output ./src/types/schema.d.ts"
+        "gen-types": "npx openapi-typescript ./src/types/schema.json --output ./src/types/schema.d.ts",
+        "gar-build": "docker build ./ -t us-west1-docker.pkg.dev/nodejs-splat3-api/splat3api/express",
+        "gar-push": "docker push us-west1-docker.pkg.dev/nodejs-splat3-api/splat3api/express",
+        "local-run": "docker run --env-file .env.docker --network splat3api_my-network -p 80:80 -p 443:443 -v \"%CD%/certificates:/etc/zerossl\" us-west1-docker.pkg.dev/nodejs-splat3-api/splat3api/express"
     },
     "dependencies": {
         "dotenv": "^16.0.3",
