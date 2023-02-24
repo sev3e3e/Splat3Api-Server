@@ -1,9 +1,9 @@
-import { Get, JsonController } from 'routing-controllers';
+import { Get, Controller } from 'routing-controllers';
 
-@JsonController()
+@Controller()
 export class IndexController {
     @Get('/')
     get() {
-        return null;
+        return 'splatoon3 unofficial api.';
     }
 }
