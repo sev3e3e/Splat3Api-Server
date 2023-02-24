@@ -3,15 +3,20 @@ import 'reflect-metadata';
 
 import { IndexController } from './routes';
 import express from 'express';
+import rateLimit from 'express-rate-limit';
+import { createServer } from 'https';
+import { readFileSync } from 'fs';
 import { useExpressServer } from 'routing-controllers';
 import { SchedulesController } from './routes/schedules';
 import { RedisClient } from './redisClient';
 
-import rateLimit from 'express-rate-limit';
 import { XRankingsController } from './routes/xrankings';
 
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 const host = '0.0.0.0';
-const port = 8000;
+const port = 80;
 
 const app = express();
 
@@ -32,8 +37,21 @@ useExpressServer(app, {
     development: false,
 });
 
+// https
+const tlsServer = createServer(
+    {
+        key: readFileSync(process.env.TLS_KEY || ''),
+        cert: readFileSync(process.env.TLS_CERT || ''),
+    },
+    app
+);
+
 await RedisClient.connect();
 
 app.listen(port, host, () => {
-    console.log(`⚡️ Server is running on localhost:${port}`);
+    console.log(`⚡️ Server is running on http://localhost:${port}`);
+});
+
+tlsServer.listen(443, () => {
+    console.log('⚡️ TLS Server is running! you can access https://localhost:443');
 });
