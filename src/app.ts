@@ -37,11 +37,23 @@ useExpressServer(app, {
     development: false,
 });
 
+const TLS_KEY = process.env.TLS_KEY_PATH
+    ? readFileSync(process.env.TLS_KEY_PATH)
+    : process.env.TLS_KEY
+    ? process.env.TLS_KEY.replace(/\\n/g, '\n')
+    : '';
+
+const TLS_CERT = process.env.TLS_CERT_PATH
+    ? readFileSync(process.env.TLS_CERT_PATH)
+    : process.env.TLS_CERT
+    ? process.env.TLS_CERT.replace(/\\n/g, '\n')
+    : '';
+
 // https
 const tlsServer = createServer(
     {
-        key: readFileSync(process.env.TLS_KEY || ''),
-        cert: readFileSync(process.env.TLS_CERT || ''),
+        key: TLS_KEY,
+        cert: TLS_CERT,
     },
     app
 );
