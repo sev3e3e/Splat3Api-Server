@@ -15,7 +15,7 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 const host = '0.0.0.0';
-const port = 3000;
+const port = Number.parseInt(process.env.PORT || '8080');
 
 const app = express();
 
