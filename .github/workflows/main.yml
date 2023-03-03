@@ -40,7 +40,6 @@ jobs:
                   service: 'splat3-api'
                   image: us-west1-docker.pkg.dev/nodejs-splat3-api/splat3api/express
                   env_vars: |
-                      PORT=3000
                       REDIS_HOST=${{ secrets.REDIS_HOST }}
                       REDIS_PORT=${{ secrets.REDIS_PORT }}
                       REDIS_USER=${{ secrets.REDIS_USER }}
